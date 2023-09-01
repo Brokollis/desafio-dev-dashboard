@@ -1,0 +1,92 @@
+.card-highlight{
+    width: 98%;
+    height: 90px;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.8em 1em;
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+}
+.card-highlight_text{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 50%;
+    height: 100%;
+}
+.card-highlight_text h1{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    font-size: 30px;
+    font-weight: 500;
+}
+.card-highlight_text p{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    font-size: 16px;
+    font-weight: 400;
+    color: #8f8e8e;
+    margin-top: 0.5em;
+}
+.card-highlight_sales-balance{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+}
+.card-highlight_quantity-sales{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+.card-highlight_icon{
+    display:flex ;
+    justify-content :center;
+    align-items:center;
+    width:auto;
+    height:100%;
+}
+.card-highlight_value{
+    display:flex ;
+    justify-content :center;
+    align-items:center;
+    width:auto;
+    height:100%;
+    font-size: 40px;
+    font-weight: 500;
+    color: #1c1c1e;
+    margin-left: 0.2em;
+}
+
+@media (max-width: 740px) {
+    .card-highlight{
+       width: 49%;
+	}
+    .card-highlight_text p{
+        font-size: 14px;
+    }
+    .card-highlight_text h1{
+        font-size:26px;
+    }
+    .card-highlight_value{
+        font-size:34px;
+    }
+}
+@media (max-width: 595px) {
+    .card-highlight{
+        width: 100%;
+        margin: 0.5em 0em;
+     }
+}

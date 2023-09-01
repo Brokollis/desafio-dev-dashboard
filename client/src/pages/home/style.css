@@ -1,0 +1,98 @@
+main{
+    display: flex;
+    width: 100%;
+    height: auto;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+.highlights{
+    display: flex;
+    width: 100%;
+    height: auto;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+}
+.cards-sales-months{
+    display: flex;
+    width: 61.5%;
+    height:190px;
+    justify-content: center;
+    align-items: center;
+}
+.cards-highlights{
+    display: flex;
+    width: 38%;
+    height:190px;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-direction: column;
+}
+.categories{
+    display: flex;
+    width: 100%;
+    height: auto;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 0.5em;
+}
+.list-sales{
+    display: flex;
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    margin-top:  0.5em;
+}
+
+@media (max-width: 945px) {
+
+	.cards-highlights{
+        width: 45%;
+	}
+    .cards-sales-months{
+        width: 55%;
+    }
+}
+@media (max-width: 815px) {
+
+	.cards-highlights{
+        width: 50%;
+	}
+    .cards-sales-months{
+        width: 50%;
+    }
+}
+@media (max-width: 740px) {
+
+    .highlights{
+        flex-direction: column;
+    }
+	.cards-highlights{
+        width: 100%;
+        height: auto;
+        flex-direction: row;
+        margin-top: 1em;
+        justify-content: space-between;
+	}
+    .cards-sales-months{
+        width: 100%;
+    }
+}
+@media (max-width: 595px) {
+
+    .highlights{
+        flex-direction: column;
+    }
+	.cards-highlights{
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+        margin-top: 1em;
+        justify-content: space-between;
+	}
+    .cards-sales-months{
+        width: 100%;
+    }
+}
