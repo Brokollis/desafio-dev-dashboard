@@ -1,37 +1,79 @@
-# Desafio de programação para vaga de desenvolvedor
+<h1>Converter Xlsx</h1>
 
-Por favor leiam este documento do começo ao fim, com muita atenção.
-O intuito deste teste é avaliar seus conhecimentos técnicos em programação.
-O teste consiste em importar um arquivo EXCEL, apresentar suas informações (transações financeiras), permitir sua edição e download após finalização.
-Este desafio deve ser feito por você em sua casa. Gaste o tempo que você quiser, porém normalmente você não deve precisar de mais do que algumas horas.
+<p>Converter Xlsx é uma aplicação full-stack que permite a conversão de arquivos Excel para exibir as informações em tela, realizar edições e fazer o download novamente dos arquivos convertidos. A aplicação consiste em uma API em Node.js com TypeScript para autenticação e manipulação dos arquivos, e uma interface visual desenvolvida em React.js com TypeScript.</p>
 
-# Instruções de entrega do desafio
+<h2>Funcionalidades</h2>
 
-1. Primeiro, faça um fork deste projeto para sua conta no Github (crie uma se você não possuir).
-2. Em seguida, implemente o projeto tal qual descrito abaixo, em seu clone local.
-3. Por fim, envie via email o projeto ou o fork/link do projeto para seu contato Manchester Investimentos com cópia para rh@manchesterinvest.com.br.
+<ul>
+  <li>Converter arquivos Excel para exibir informações em tela.</li>
+  <li>Permitir a edição das informações exibidas.</li>
+  <li>Fazer o download dos arquivos convertidos.</li>
+</ul>
 
-# Descrição do projeto
+<h2>🚀 Começando</h2>
 
-Você recebeu um arquivo EXCEL com os dados das movimentações financeiras de uma loja.
-Precisamos criar uma maneira para que estes dados sejam visualizados e editados em uma interface web.
+<p>Siga as instruções abaixo para obter uma cópia do projeto em execução na sua máquina local para fins de desenvolvimento e teste.</p>
 
-Sua tarefa é criar uma interface web que aceite o upload do arquivo, normalize os dados, exiba essas informações em tela e permita a sua edição, e por fim, permita o download das informações com a mesma formatação inicial.
+<h3>Pré-requisitos</h3>
 
-**Sua aplicação web DEVE:**
+<p>Certifique-se de ter as seguintes ferramentas instaladas em sua máquina:</p>
 
-1. Ter uma tela (via um formulário) para fazer o upload do arquivo. Pontos extras se a implementação não utilizar bibliotecas para a função de importação.
-2. Interpretar o arquivo recebido, normalizar os dados, e apresentar em tela os dados recebidos. 
-3. Exibir uma lista das vendas realizadas da loja, e nesta lista deve conter um totalizador das vendas por mês e por categoria de produto.
-4. Permitir a edição dos dados em tela, e o download dos dados após as edições terem sido concluídas, na mesma formatação utilizada pelo arquivo .xlsx de entrada.
-5. Utilizar React, junto com Material UI ou Chakra UI.
-6. Utilizar apenas bibliotecas livres ou gratuitas, e deve ser implementada apenas com Javascript e Typescript.
-7. Conter o arquivo Readme descrevendo bem o projeto e seu setup. O arquivo deve identificar todas as etapas e dependências para a instância da aplicação.
+<ul>
+  <li>Node.js</li>
+  <li>npm (gerenciador de pacotes do Node.js)</li>
+</ul>
 
-**Sua aplicação web não precisa:**
+<h3>Instalação</h3>
 
-1. Lidar com autenticação ou autorização (pontos extras se ela fizer, mais pontos extras se a autenticação for feita via OAuth).
+<ol>
+  <li>Clone o repositório para sua máquina local:</li>
+  <br>
+  <pre><code>git clone https://github.com/SEU_USUARIO/Converter-Xlsx.git</code></pre>
+  <hr>
+  <li>Navegue até o diretório da API:</li>
+  <br>
+  <pre><code>cd server</code></pre>
+  <hr>
+  <li>Instale as dependências da API:</li>
+  <br>
+  <pre><code>npm install</code></pre>
+  <hr>
+  <li>Navegue até o diretório do front-end:</li>
+  <br>
+  <pre><code>cd client</code></pre>
+  <hr>
+  <li>Instale as dependências do front-end:</li>
+  <br>
+  <pre><code>npm install</code></pre>
+  <hr>
+</ol>
 
-# Referência
+<p>Para iniciar a aplicação,navegue até o diretório de 'server' e 'client' e em ambos digite:</p>
+ <br>
+  <pre><code>npm run dev</code></pre>
+  <hr>
 
-Este desafio foi baseado neste outro desafio: https://github.com/ByCodersTec/desafio-dev
+<h2>🛠️ Construído com</h2>
+
+<ul>
+  <li>Node.js - Ambiente de tempo de execução JavaScript utilizado para a API de autenticação.</li>
+  <li>TypeScript - Linguagem de programação utilizada no back-end e front-end.</li>
+  <li>Axios - Biblioteca para fazer requisições HTTP.</li>
+  <li>Express - Framework para construção de APIs em Node.js.</li>
+  <li>React.js - Biblioteca JavaScript para construção de interfaces de usuário.</li>
+  <li>Styled Components - Biblioteca para estilização de componentes React.</li>
+  <li>Material UI - Biblioteca de componentes de interface de usuário.</li>
+  <li>Xlsx - Biblioteca para manipulação de arquivos Excel.</li>
+</ul>
+
+<h2>📌 Versão</h2>
+
+<p>Este projeto encontra-se em construção e está em sua primeira versão.</p>
+
+<h2>✒️ Autor</h2>
+
+<p>Seu Nome - <a href="https://www.linkedin.com/in/seu-linkedin/">LinkedIn</a></p>
+
+<h2>🚧 Em construção</h2>
+
+<p>Converter Xlsx ainda está em desenvolvimento, e novas funcionalidades podem estar indisponíveis ou incompletas. Estamos trabalhando duro para finalizar o projeto o mais rápido possível e entregar a melhor experiência aos usuários. Agradecemos sua compreensão e paciência!!</p>
