@@ -28,7 +28,7 @@
 <ol>
   <li>Clone o repositório para sua máquina local:</li>
   <br>
-  <pre><code>git clone https://github.com/SEU_USUARIO/Converter-Xlsx.git</code></pre>
+  <pre><code>git clone https://github.com/Brokollis/desafio-dev-dashboard.git
   <hr>
   <li>Navegue até o diretório da API:</li>
   <br>
