@@ -27,29 +27,29 @@
 
 <ol>
   <li>Clone o repositório para sua máquina local:</li>
-  <br>
+  <hr>
   <pre><code>git clone https://github.com/Brokollis/desafio-dev-dashboard.git
   <hr>
   <li>Navegue até o diretório da API:</li>
-  <br>
+  <hr>
   <pre><code>cd server</code></pre>
   <hr>
   <li>Instale as dependências da API:</li>
-  <br>
+  <hr>
   <pre><code>npm install</code></pre>
   <hr>
   <li>Navegue até o diretório do front-end:</li>
-  <br>
+  <hr>
   <pre><code>cd client</code></pre>
   <hr>
   <li>Instale as dependências do front-end:</li>
-  <br>
+  <hr>
   <pre><code>npm install</code></pre>
   <hr>
 </ol>
 
 <p>Para iniciar a aplicação,navegue até o diretório de 'server' e 'client' e em ambos digite:</p>
- <br>
+ <hr>
   <pre><code>npm run dev</code></pre>
   <hr>
 
