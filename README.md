@@ -28,7 +28,7 @@
 <ol>
   <li>Clone o repositório para sua máquina local:</li>
   <hr>
-  <pre><code>git clone https://github.com/Brokollis/desafio-dev-dashboard.git
+  <pre><code>git clone https://github.com/Brokollis/desafio-dev-dashboard.git</code></pre>
   <hr>
   <li>Navegue até o diretório da API:</li>
   <hr>
