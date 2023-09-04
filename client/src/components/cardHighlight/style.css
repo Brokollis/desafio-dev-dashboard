@@ -25,6 +25,7 @@
     height: auto;
     font-size: 30px;
     font-weight: 500;
+    text-transform: capitalize;
 }
 .card-highlight_text p{
     display: flex;

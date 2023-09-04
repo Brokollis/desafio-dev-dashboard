@@ -38,6 +38,8 @@ const Home = () => {
       return sale.DATA.includes(`${currentMonth}/${currentYear}`);
     });
     
+    const currentDate = new Date();
+    const month = currentDate.toLocaleDateString('default', { month: 'long' }); 
     const totalQuantity = filteredSales.reduce((total, sale) => total + sale.QUANTIDADE_VENDIDA, 0);
        
 
@@ -86,12 +88,12 @@ const Home = () => {
                 </div>
                 <div className="cards-highlights">
                     <CardHighlight
-                        title="Agosto"
+                        title={month}
                         descripton="Total vendido mês"
                         quantitySales={totalQuantity}
                     />
                     <CardHighlight
-                        title="2021"
+                        title="Anual"
                         descripton="Total vendido ano"
                         quantitySales={totalSales}
                     />

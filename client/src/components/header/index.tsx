@@ -2,11 +2,12 @@ import GenericButton from '../genericButton';
 import GenericInput from '../genericInput';
 import { FileDataContext } from '../../services/UseFileContext';
 import * as XLSX from 'xlsx';
-import { useContext, useState } from 'react';
+import { useContext, useEffect } from 'react';
 import { format } from 'date-fns';
 
 import './style.css';
 import logo from '../../assets/images/manchester_logo.png'
+
 
 interface IExcelData {
     CLIENTE: string;
@@ -19,8 +20,7 @@ interface IExcelData {
 
 const HeaderComponent = () => {
 
-    const { setJsonData, xlsxData } = useContext(FileDataContext);
-    const [fileContent, setFileContent] = useState('');
+    const { jsonData, setJsonData, xlsxData, setXlsxData } = useContext(FileDataContext);
    
     const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
       const file = event.target.files && event.target.files[0];
@@ -28,27 +28,25 @@ const HeaderComponent = () => {
         const reader = new FileReader();
         reader.onload = (e) => {
           const content = e.target?.result as string;
-          setFileContent(content);
-    
+  
           const workbook = XLSX.read(content, { type: 'binary' });
           const sheetName = workbook.SheetNames[0];
           const sheet = workbook.Sheets[sheetName];
           const data = XLSX.utils.sheet_to_json<IExcelData>(sheet, {
             raw: false,
-            dateNF: 'dd/mm/yyyy', // Corrija o formato de data para minúsculas 'dd/mm/yyyy'
+            dateNF: 'dd/mm/yyyy',
           });
-    
-          
-          const formattedData = data.map((item, index ) => ({
+  
+          const formattedData = data.map((item, index) => ({
             ID: index + 1,
             CLIENTE: item.CLIENTE,
             IDADE: parseInt(item.IDADE),
             ESTADO: item.ESTADO,
             PRODUTO: item.PRODUTO,
             QUANTIDADE_VENDIDA: parseInt(item.QUANTIDADE_VENDIDA),
-            DATA: format(new Date(item.DATA), 'dd/MM/yyyy'), // Formate apenas a propriedade DATA
+            DATA: format(new Date(item.DATA), 'dd/MM/yyyy'),
           }));
-                  
+  
           setJsonData(formattedData);
         };
         reader.readAsBinaryString(file);
@@ -68,7 +66,21 @@ const HeaderComponent = () => {
       document.body.appendChild(link);
       link.click();
     };
+
+    useEffect(() => {
+      const mutableRows = jsonData.map((row) => ({
+        CLIENTE: row.CLIENTE,
+        IDADE: row.IDADE,
+        ESTADO: row.ESTADO,
+        PRODUTO: row.PRODUTO,
+        QUANTIDADE_VENDIDA: row.QUANTIDADE_VENDIDA,
+        DATA: row.DATA,
+      }));
+
+      setXlsxData(mutableRows);
+    }, [jsonData, setXlsxData]); 
       
+
     return (
         <header>
           <div className="header-container">
@@ -99,3 +111,5 @@ const HeaderComponent = () => {
 }
 
 export default HeaderComponent;
+
+

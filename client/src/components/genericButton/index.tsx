@@ -5,7 +5,7 @@ interface IPropsGenericButton{
     onClick?: () => void;
     type?: string;
     text: string;
-    icon: React.ReactNode;
+    icon?: React.ReactNode;
     margin: string;
     width: string;
 }
