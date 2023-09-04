@@ -28,7 +28,7 @@
 <ol>
   <li>Clone o repositório para sua máquina local:</li>
   <br>
-  <pre><code>git clone https://github.com/SEU_USUARIO/Converter-Xlsx.git</code></pre>
+  <pre><code>git clone https://github.com/Brokollis/desafio-dev-dashboard.git
   <hr>
   <li>Navegue até o diretório da API:</li>
   <br>
@@ -72,7 +72,7 @@
 
 <h2>✒️ Autor</h2>
 
-<p>Seu Nome - <a href="https://www.linkedin.com/in/seu-linkedin/">LinkedIn</a></p>
+<p>Vitor Aguiar - <a href =" https://www.linkedin.com/in/vitor-aguiar-ab3937192">LinkedIn</a></p>
 
 <h2>🚧 Em construção</h2>
 
