@@ -13,6 +13,7 @@ interface IPropsGenericButton{
 const GenericButton = ({onClick, text, icon, margin, width} : IPropsGenericButton) => {
     return(
         <button 
+            className='genericButton'
             onClick = {onClick} 
             style={
                 {

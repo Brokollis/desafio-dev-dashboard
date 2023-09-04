@@ -10,11 +10,17 @@
     background-color: white;
     border-radius: 8px;
     width: 350px;
-    height: 650px;
+    height: 685px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 .edit-form h2{
     margin :0.5em ;
     font-size: 26px;
     font-weight: 500;
+}
+.edit-form_buttons{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }

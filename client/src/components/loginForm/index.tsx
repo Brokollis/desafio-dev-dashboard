@@ -20,11 +20,13 @@ const LoginForm = () => {
         const password = formData.get("password") as string;
 
         try {
-            await auth.authenticate(email, password);
-
-            navigate("/");
-            console.log('Login Successful');
-            console.log("Login bem-sucedido");
+            const isAuthenticate =  await auth.authenticate(email, password);
+            if(isAuthenticate !== null){
+                navigate("/");
+                console.log('Login Successful');
+                console.log("Login bem-sucedido");
+            }
+           
         } catch (error) {
             console.error("Email ou senha inválidos!");
             console.log("Email ou senha inválidos");
@@ -49,17 +51,13 @@ const LoginForm = () => {
                     
                     <div>
                         <Button
+                        style={{
+                            width: '100%'
+                        }}
                         type="submit"
                         >
                             Entrar
                         </Button>
-                        {/* <GenericButton
-                            onClick={handleUpdateClick}
-                            icon
-                            margin='0.4em 0em'
-                            text='Cancelar'
-                            width='250px'
-                        /> */}
                     </div>
                 </Box>
             </form>

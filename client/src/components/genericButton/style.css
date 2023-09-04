@@ -1,4 +1,4 @@
-button{
+.genericButton{
   width: 142px;
   height: 40px;
   display:flex;
@@ -33,7 +33,7 @@ button{
 }
 
 @media (max-width: 540px) {
-	button{
+	.genericButton{
 		width: 48% !important;
     background-color: white;
     margin: 0px !important;

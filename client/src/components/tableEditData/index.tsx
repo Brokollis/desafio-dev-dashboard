@@ -31,12 +31,17 @@ const EditForm = ({ selectedRow, onClose }: EditFormProps) => {
     setEditedData({ ...editedData, [name]: newValue });
   };
 
-  const handleEditTask = ( newData: ISalesData) => {
+  const handleEditData = ( newData: ISalesData) => {
     const updateData = jsonData.map((data) =>
       data.ID ===  selectedRow.ID ? { ...newData } : data
     );
-    console.log(updateData)
     setJsonData(updateData);
+    onClose();
+  }
+
+  const handleDeleteData = () => {
+    const updateDeletedData = jsonData.filter((data) => data.ID !== selectedRow.ID);
+    setJsonData(updateDeletedData);
     onClose();
   }
 
@@ -46,7 +51,7 @@ const EditForm = ({ selectedRow, onClose }: EditFormProps) => {
         <h2>Editar Dados</h2>
         <form 
           onSubmit={(e) => {
-            e.preventDefault(); handleEditTask(editedData)
+            e.preventDefault(); handleEditData(editedData)
           }}
         >
           <Box
@@ -63,17 +68,23 @@ const EditForm = ({ selectedRow, onClose }: EditFormProps) => {
             <TextField id="standard-basic" name="PRODUTO" label="Produto" variant="outlined" value={editedData.PRODUTO}  onChange={handleInputChange}/>
             <TextField id="filled-basic" name="QUANTIDADE_VENDIDA" label="Quantidade vendas" variant="outlined" value={editedData.QUANTIDADE_VENDIDA} onChange={handleInputChange}/>
             <TextField id="standard-basic" name="DATA" label="Data" variant="outlined"  value={editedData.DATA} onChange={handleInputChange}/>
-            <div>
+            <div className='edit-form_buttons'>
               <GenericButton
                 margin='0.4em 0em'
-                text='Enviar'
-                width='250px'
+                text='Salvar'
+                width='100%'
               />
               <GenericButton
+                onClick={ handleDeleteData}
+                margin='0.4em 0em'
+                text='Deletar'
+                width='100%'
+              />
+               <GenericButton
                 onClick={onClose}
                 margin='0.4em 0em'
                 text='Cancelar'
-                width='250px'
+                width='100%'
               />
             </div>
           </Box>

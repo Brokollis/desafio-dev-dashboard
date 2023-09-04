@@ -3,6 +3,7 @@ import Routies from "./routes/Routes";
 import { FileDataProvider } from "./services/UseFileContext";
 import { ContainerGlobal } from "./styles/GlobalStyle";
 import { AuthProvider } from "./utils/AuthProvider";
+
 // import { AuthProvider } from "./utils/AuthProvider";
 
 const App = () => {

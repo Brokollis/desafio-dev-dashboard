@@ -1,9 +1,9 @@
 import { DataGrid, GridRowsProp, GridColDef } from '@mui/x-data-grid';
 import { FileDataContext } from '../../services/UseFileContext';
 import { useContext, useState } from 'react';
-import './style.css'
 import EditForm from '../tableEditData';
 import { ISalesData } from '../../interfaces/SalesData';
+import './style.css'
 
 
 
@@ -22,10 +22,10 @@ export default function TableSales() {
   const { jsonData } = useContext(FileDataContext);
   const [selectedRow, setSelectedRow] = useState<ISalesData | null>();
 
-  
+
   const rows: GridRowsProp = jsonData.map((dataItem, index) => ({
-    id: index + 1, 
-    ID:  index + 1,
+    id: index++, 
+    ID: index++,
     CLIENTE: dataItem.CLIENTE,
     IDADE: dataItem.IDADE,
     ESTADO: dataItem.ESTADO,
@@ -51,7 +51,6 @@ export default function TableSales() {
           onClose={() => setSelectedRow(null)}
         />
       )}
-
     </div>
   );
 }
